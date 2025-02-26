@@ -17,7 +17,16 @@ module.exports = {
     },
     plugins:[
         new HtmlWebpackPlugin({
-            template:"./src/mainpage.html",
+            template:"./src/mainPage.html",
+            inject:"body",
+            filename:"distMainPage.html"
         })
-    ]
+    ],
+    devtool:"eval-source-map",
+    devServer:{
+        watchFiles:["src/**/*.html"],
+        static: "./dist",
+        hot: true,  // Active le Hot Module Replacement
+        liveReload: true,  // Recharge la page si un fichier statique change
+    }
 }

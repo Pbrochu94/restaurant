@@ -28,6 +28,7 @@ header{
     display:grid;
     grid-template-columns:1fr 4fr ;
 }
+
 .sidebar{
     grid-row: 2/5;
     text-align: center;
@@ -103,11 +104,55 @@ header{
     width:50%;
     justify-self: center;
     align-self:baseline;
+    background-image: url("../img/Home-photo.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.tabs-display-menu{
+    height: 80%;
+    width:50%;
+    justify-self: center;
+    align-self:baseline;
+    background-color: aqua;
+    background-image: url("../img/menu.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display:none;
+}
+
+.tabs-display-contact{
+    height: 80%;
+    width:50%;
+    justify-self: center;
+    align-self:baseline;
+    background-color: rgb(239, 241, 241);
+    display: flex;
+    flex-direction: column;
+    justify-content:baseline;
+    padding: 2%;
+    background-color: rgb(248, 153, 85);
+    justify-content:space-between;
+    border-radius: 10px;
     display: none;
 }
 
-.tabs-display-home>img{
-    height: 100%;
-    width:100%;
-    border-radius: 10px;
+.tabs-display-contact>p,.tabs-display-contact>h1{
+    height: auto;
+    width: auto;
+}
+
+span{
+    height: auto;
+    width: auto;
+    font-size:1.5em ;
+}
+
+hr{
+    background-color: rgb(221, 113, 71);
+    border-color:rgb(221, 113, 71);
+    height: 1px;
+    width: auto; 
 }

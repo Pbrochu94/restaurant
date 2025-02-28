@@ -12,20 +12,23 @@
 
 body{
     font-size: var(--basic-typo);
-    background-color: bisque;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows:repeat(4, 1fr);
+    height: 100vh;
+    width:100vw;
+    background-color: rgb(233, 230, 211);
+    background-image: url("../img/food-background.jpg");
+    background-size: cover;
 }
 
 header{
-    background-color: chocolate;
+    background-color: rgb(248, 153, 85);
     grid-column: 1/6;
     display:grid;
     grid-template-columns:1fr 4fr ;
 }
 .sidebar{
-    background-color: darkgoldenrod;
     grid-row: 2/5;
     text-align: center;
     display: flex;
@@ -33,7 +36,6 @@ header{
 }
 
 .content{
-    background-color: rgb(19, 131, 79);
     grid-area: 2/2/5/6;
 }
 
@@ -56,7 +58,7 @@ header{
     text-align: center;
     font-size:1em;
     padding: 0%10%0%10%;
-    background-color:blueviolet;
+    background-color: rgb(247, 187, 144);
     padding: 8%;
     border-radius: 0 0 20px 20px;
     margin-bottom: 20%;
@@ -70,7 +72,7 @@ header{
     display:flex;
     justify-content: center;
     align-items:end;
-    background-color: aqua;
+    background-color: rgb(248, 153, 85);
     margin-top:5%;
     border-radius: 20px 20px 0 0;
 }
@@ -82,7 +84,7 @@ header{
 }
 
 .tabs-wrapper{
-    background-color: aquamarine;
+
     display:flex;
     justify-content:center;
     align-items:end;
@@ -92,6 +94,20 @@ header{
 .tabs-button{
     height:40px;
     width:100px;
-    background-color: brown;
+    background-color: rgb(236, 189, 58);
     border-radius: 6px 6px 0 0;
+}
+
+.tabs-display-home{
+    height: 80%;
+    width:50%;
+    justify-self: center;
+    align-self:baseline;
+    display: none;
+}
+
+.tabs-display-home>img{
+    height: 100%;
+    width:100%;
+    border-radius: 10px;
 }

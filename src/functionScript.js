@@ -14,11 +14,13 @@ tabsHome.classList.add("tabs-display-home")
 appending(contentSelector, tabsHome);
 let tabsMenu = document.createElement("div");
 tabsMenu.classList.add("tabs-display-menu");
+tabsMenu.style.setProperty("display", "none")
 appending(contentSelector, tabsMenu);
 
 //Creation of the contact page
 let tabsContact = document.createElement("div");
 tabsContact.classList.add("tabs-display-contact");
+tabsContact.style.setProperty("display", "none")
 let contactTitle = document.createElement("h1");
 appending(tabsContact, contactTitle);
 contactTitle.textContent = "Contact informations";
@@ -61,7 +63,7 @@ appending(PSpanWrapper4, contactWebsite);
 
 //appending the whole contact tab to the content wrapper
 appending(contentSelector, tabsContact);
-
+applySelector()
 
 function sayHello(){
     console.log("Hello world");
@@ -76,11 +78,11 @@ function addSpan(pElement, text){//a corriger
     let spanElement = document.createElement("span");
     spanElement.textContent = text;
     pElement.append(spanElement);
-    console.log(`function span started with parent: ${pElement} the span created:${spanElement} with this text:${text}`);
 }
 
 function createHr(parent){
     let separationLine = document.createElement("hr");
     parent.append(separationLine);
 }
-export {sayHello};
+
+import { applySelector } from "./tabsbehavior";

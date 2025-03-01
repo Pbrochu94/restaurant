@@ -108,7 +108,6 @@ header{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 10px;
-    display:none;
 }
 
 .tabs-display-menu{
@@ -121,7 +120,6 @@ header{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 10px;
-    display:none;
 }
 
 .tabs-display-contact{

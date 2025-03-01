@@ -7,7 +7,7 @@
 }
 
 :root{
-    --basic-typo:1vw;
+    --basic-typo:max(24px,1vw);
 }
 
 body{
@@ -38,7 +38,7 @@ header{
 }
 
 .title{
-    font-size: 4em;
+    font-size: 3em;
     display: flex;
     justify-content:center;
     align-items:center;
@@ -53,7 +53,7 @@ header{
 
 .desc{
     text-align: center;
-    font-size:1em;
+    font-size:0.8em;
     padding: 0%10%0%10%;
     background-color: rgb(247, 187, 144);
     padding: 8%;
@@ -143,6 +143,7 @@ header{
 .tabs-display-contact>p,.tabs-display-contact>h1{
     height: auto;
     width: auto;
+    font-size: 1.5em;
 }
 
 span{
@@ -163,6 +164,7 @@ hr{
     width: auto;
     display:flex;
     gap:5%;
+    overflow: hidden;
 }
 
 

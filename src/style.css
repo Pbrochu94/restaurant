@@ -148,7 +148,7 @@ header{
 span{
     height: auto;
     width: auto;
-    font-size:1.5em ;
+    font-weight: bold;
 }
 
 hr{
@@ -156,4 +156,19 @@ hr{
     border-color:rgb(221, 113, 71);
     height: 1px;
     width: auto; 
+}
+
+.paraAndSpanWrapper{
+    height: auto;
+    width: auto;
+    display:flex;
+    gap:5%;
+}
+
+
+
+.paraAndSpanWrapper>p{
+    display:flex;
+    justify-content: baseline;
+    align-items: end;
 }

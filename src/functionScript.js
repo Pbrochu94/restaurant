@@ -24,28 +24,41 @@ appending(tabsContact, contactTitle);
 contactTitle.textContent = "Contact informations";
 createHr(tabsContact);
 
+let PSpanWrapper1 = document.createElement("div");
+PSpanWrapper1.classList.add("paraAndSpanWrapper");
+appending(tabsContact, PSpanWrapper1);
+addSpan(PSpanWrapper1, "Email:");
 let contactMail = document.createElement("p");
-//addSpan(contactMail, "Email:");        <-------------------              
 contactMail.textContent = "Raymond@gmail.com";
-appending(tabsContact, contactMail);
+appending(PSpanWrapper1, contactMail);
 createHr(tabsContact);
 
+let PSpanWrapper2 = document.createElement("div");
+PSpanWrapper2.classList.add("paraAndSpanWrapper");
+appending(tabsContact, PSpanWrapper2);
+addSpan(PSpanWrapper2, "Phone:");
 let contactPhone = document.createElement("p");
-//addSpan(contactPhone, "Phone:");        <-------------------
 contactPhone.textContent = "514-665-8989";
-appending(tabsContact, contactPhone);
+appending(PSpanWrapper2, contactPhone);
 createHr(tabsContact);
 
+let PSpanWrapper3 = document.createElement("div");
+PSpanWrapper3.classList.add("paraAndSpanWrapper");
+appending(tabsContact, PSpanWrapper3);
+addSpan(PSpanWrapper3, "Address:");
 let contactAddress = document.createElement("p");
-//addSpan(contactAddress, "Address:");        <-------------------
 contactAddress.textContent = "Entre 2 villages creux drette sul bord dla 132";
-appending(tabsContact, contactAddress);
+appending(PSpanWrapper3, contactAddress);
 createHr(tabsContact);
 
+let PSpanWrapper4 = document.createElement("div");
+PSpanWrapper4.classList.add("paraAndSpanWrapper");
+appending(tabsContact, PSpanWrapper4);
+addSpan(PSpanWrapper4, "Website:");
 let contactWebsite = document.createElement("p");
-//addSpan(contactWebsite, "Website:");        <-------------------
 contactWebsite.textContent = "www.snackbarchezraymond.com";
-appending(tabsContact, contactWebsite);
+appending(PSpanWrapper4, contactWebsite);
+
 //appending the whole contact tab to the content wrapper
 appending(contentSelector, tabsContact);
 
@@ -58,10 +71,11 @@ function appending(parent, child){//automated append function
     parent.append(child);
 }
 
+
 function addSpan(pElement, text){//a corriger
     let spanElement = document.createElement("span");
-    spanElement.textContent = "ALLO";
-    pElement.prepend(spanElement);
+    spanElement.textContent = text;
+    pElement.append(spanElement);
     console.log(`function span started with parent: ${pElement} the span created:${spanElement} with this text:${text}`);
 }
 

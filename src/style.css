@@ -7,7 +7,7 @@
 }
 
 :root{
-    --basic-typo:1vw;
+    --basic-typo:max(24px,1vw);
 }
 
 body{
@@ -29,17 +29,6 @@ header{
     grid-template-columns:1fr 4fr ;
 }
 
-.sidebar{
-    grid-row: 2/5;
-    text-align: center;
-    display: flex;
-    flex-direction:column;
-}
-
-.content{
-    grid-area: 2/2/5/6;
-}
-
 .logo{
     height: 120px;
     width: 120px;
@@ -49,15 +38,22 @@ header{
 }
 
 .title{
-    font-size: 4em;
+    font-size: 3em;
     display: flex;
     justify-content:center;
     align-items:center;
 }
 
+.sidebar{
+    grid-row: 2/5;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+}
+
 .desc{
     text-align: center;
-    font-size:1em;
+    font-size:0.8em;
     padding: 0%10%0%10%;
     background-color: rgb(247, 187, 144);
     padding: 8%;
@@ -76,6 +72,10 @@ header{
     background-color: rgb(248, 153, 85);
     margin-top:5%;
     border-radius: 20px 20px 0 0;
+}
+
+.content{
+    grid-area: 2/2/5/6;
 }
 
 .content{
@@ -120,7 +120,6 @@ header{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 10px;
-    display:none;
 }
 
 .tabs-display-contact{
@@ -136,18 +135,19 @@ header{
     background-color: rgb(248, 153, 85);
     justify-content:space-between;
     border-radius: 10px;
-    display: none;
+
 }
 
 .tabs-display-contact>p,.tabs-display-contact>h1{
     height: auto;
     width: auto;
+    font-size: 1.5em;
 }
 
 span{
     height: auto;
     width: auto;
-    font-size:1.5em ;
+    font-weight: bold;
 }
 
 hr{
@@ -155,4 +155,20 @@ hr{
     border-color:rgb(221, 113, 71);
     height: 1px;
     width: auto; 
+}
+
+.paraAndSpanWrapper{
+    height: auto;
+    width: auto;
+    display:flex;
+    gap:5%;
+    overflow: hidden;
+}
+
+
+
+.paraAndSpanWrapper>p{
+    display:flex;
+    justify-content: baseline;
+    align-items: end;
 }
